@@ -1,24 +1,20 @@
-# README
+## ROUTES
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+/restaurants 
+verb 'url', to: 'controller#action', as: 'prefix'
 
-Things you may want to cover:
+1. get 'restaurants', to: 'restaurants#index'
+2. get 'restaurants/new', to: 'restaurants#new', as: :new_restaurant
+3. get 'restaurants/:id', to: 'restaurants#show', as: :restaurant
+4. post 'restaurants', to: 'restaurants#create'
+5. patch 'restaurants/:id', to: 'restaurants#update'
+6. get 'restaurants/:id/edit', to: 'restaurants#edit', as: :edit_restaurant
+7. delete 'restaurants/:id', to: 'restaurants#destroy'
 
-* Ruby version
+resources :restaurants
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+GENERATE APP
+1. Generate the models && migrations
+2. Create a route
+3. Create the controller action
+4. Create the view
